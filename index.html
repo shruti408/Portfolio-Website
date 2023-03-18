@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <ul>
+                <li class="navlist">
+                    <a href="#" class="aedit">Home</a>
+                </li>
+                <li class="navlist">
+                    <a href="#" class="aedit"  onclick="document.getElementById('about').innerHTML">About</a>
+                </li>
+                <li class="navlist">
+                    <a href="#" class="aedit">Skills</a>
+                </li>
+                <li class="navlist">
+                    <a href="#" class="aedit">Contact</a>
+                </li>
+                <li class="navlist">
+                    <button>
+                        <a href="Shruti_Resume.pdf" class="abedit" target="_main" download="Shruti_resume">Download CV</a>
+                
+                    </button>
+                </li> 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- MY INTO Page -->
+            <!-- <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80" id="frame"></img> -->
+            <div id="intro">
+                <h1>Hi I'm Shruti</h1>
+                <p style="font-family:'Baloo Bhai 2', cursive">Front-End Web Developer</p>
+            </div>
+            <button id="hire">Hire Me</button>
+            <div>
+                <!-- <img src="https://www.codingdojo.com/blog/wp-content/uploads/working-1.jpg"><img> -->
+            <!-- <img src="https://www.codingdojo.com/blog/wp-content/uploads/best-practices-for-computer-programming.jpg"></img> -->
+            <!-- <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=455&q=80" id="frame"></img> -->
+            <!-- <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80" id="frame"></img> -->
+            
+            </div>
+        </section>
+        <!-- About Me Section Begins Here -->
+        <section>
+            <h2><center>ABOUT ME</center></h2>
+            <hr style="position: relative;
+            bottom: 30px;">
+            <!-- Education Section -->
+            <div>
+                <details>
+                    <table>
+                        <thead style="background-color: white; border:2px solid black;">
+                            <summary>
+                                <h3><center>EDUCATION</center></centerEDUCATION></h3>
+                            </summary> 
+                        </thead>
+                        <tbody>
+                            <th>COURSE</th>
+                            <th>YEAR</th>
+                            <th colspan="2">UNIVERSITY</th>
+                            <tr>
+                                <td>Masters Of Computer Applications</td>
+                                <td>2022</td>
+                                <td><p>Lovely Professional University</p></td>
+                                <td><img src="lpu.png" class="imageLPU"></td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor Of Arts In English</td>
+                                <td>2021</td>
+                                <td><p>Delhi University</p></td>
+                                <td><image src="du.png" class="imageDU"></image></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
+            <!-- Training Section -->
+            <div>
+                <details>
+                    <summary>
+                        <h3><center>TRAINING/CERTIFICATE</center></h3>
+                    </summary>
+                    <div id="training">
+                        <h4>C++</h4>
+                        <p>Coding Ninjas</p>
+                        <p>2020</p>
+                        <p>learnt the basics of C++ and Datas Sructures & Algorithms </p>
+                        <img src="cn2.jpg" class="imageCN">
+                    </div>
+                </details>
+            </div>   
+            <!-- Actievement Section -->
+            <div id="achievement">
+                <details>
+                    <summary>
+                        <h3><center>ACHIEVEMENTS</center></h3>
+                    </summary>    
+                <!-- Achievement List -->
+                    <div id="achiv">
+                        <ul>
+                            <li class="achivlist">
+                                <h4>Certificate in Spanish</h4>
+                                <p>University of Delhi</p>
+                                <p>2018-2019</p>
+                                <img src="du.png" class="imageDu2">
+                            </li>
+                            <li class="achivlist">
+                                <h4>Diploma in Spanish</h4>
+                                <p>University of Delhi</p>
+                                <p>2019-2020</p>
+                                <img src="du.png" class="imageDu2"><
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- Skills Section From Here -->
+        <section id="skillset">
+            <h3><center>SKILLS</center></h3>
+            <hr>
+            <div>
+                <!-- List of Skills -->
+                <ul id="skill">
+                    <li class="box"">HTML</li>
+                    <li class="box">CSS</li>
+                    <li class="box">JavaScript (JS)</li>
+                    <li class="box">ReactJS</li>
+                    <li class="box">C++</li>
+                    <!-- <li class="box">JAva</li> -->
+                    <!-- <li class="box">C</li> -->
+                    <!-- <li class="box">Python</li> -->
+                    <!-- <li class="box">PHP</li> -->
+                    <li class="box">SQL</li>
+                    <li class="box">Data Structures & Algorithms</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Projrct Section from here -->
+        <section id="project">
+            <h3><center>PROJECTS</center></h3>
+            <hr>
+            <div class="projectbox">
+                <a href="#" target="_main" class="">
+                    <img src="Screenshot (200).png" class="project1">
+                </a>
+            </div>
+            <div class="projectbox">
+                <img src="#" class="project1">
+                
+                project2
+            </div>
+            <div class="projectbox">
+                <img src="#" class="project1">
+                project3
+            </div>
+        </section>
+        <!-- Contact Me Section From Here -->
+        <section>
+            <h3><center>CONTACT ME</center></h3>
+            <hr>
+            <!-- This is Contact Info  -->
+            <div id="contacthere">
+                <div id="contact_info">
+                    <h3>Contact Details</h3>
+                    <ul id="contact">
+                        <!-- <li class="condetails">
+                            <img src="phone.jpg" class="styling">
+                            <h5>Mobile Number</h5
+                            <br>
+                            7982090404
+                        </li> -->
+                        <li class="condetails">
+                            <img src="email.png"  class="styling">
+                            jainsjruti8798@gmail.com
+                        </li>
+                        <li class="condetails">
+                            <img src="images.png" class="styling">
+                            <a href="https://www.linkedin.com/in/jainshruti8/" class="aedit2" target="_main">jainshruti8</a>
+                        </li>
+                        <li class="condetails"> 
+                            <img src="github.png" class="styling"> 
+                            <a href="https://github.com/87Shruti" class="aedit2" target="_main">Shruti_github</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- This is contact form -->
+                <div id="contactform">
+                        <form action="">
+                            <h3>Contact form</h3>
+                            <label>
+                            <input type="text" placeholder="Your Name" class="inputabs">
+                            <!-- <input type="text" placeholder="Last Name"> -->
+                            </label><br><br>
+                            <label>
+                            <input type="email" placeholder="Your Email" class="inputabs">
+                            </label><br><br>
+                            <label>
+                            <input type="text" placeholder="Your Subject" class="inputabs">
+                            </label><br><br>
+                            <label>
+                            <textarea name="Message" placeholder="Write your Message" id="textab" rows="7" cols="39"></textarea>
+                            </label><br><br>
+                            <label>
+                            <input type="submit" value="Send Message" id="submit_btn">
+                            </label>
+                        </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer From Here -->
+    <footer>
+    </footer>
+</body>
+</html>
