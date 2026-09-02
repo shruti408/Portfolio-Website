@@ -1,119 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-Shruti Jain</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Shruti Jain | Frontend & Full-Stack Developer</title>
+
+    <meta
+        name="description"
+        content="Shruti Jain is a frontend and full-stack developer specializing in React, JavaScript, TypeScript, Node.js and responsive web applications."
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #198754;
+            display: inline-block;
+        }
+        .icon-circle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        } 
+        .hover-card:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.08) !important; }
+        .nav-link.active-link { font-weight: 600; }
+    </style>
 </head>
 
 <body>
-    <header>
-        <!-- navbar starts here  -->
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <div class="container m-0">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item me-3">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item bg-success me-3">
-                        <a class="nav-link" href="https://drive.google.com/file/d/1XINMOEPXCFOYM-G37pgwz5tLLcPbQvit/view?usp=drive_link" target="_main">Resume</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- navbar ends here -->
-    </header>
 
-    <!-- main content starts here -->
-    <main>
-        <!-- intro section starts here-->
-        <section>
-            <div class="container-fluid py-3 my-5 text-center">
-                <h1 class="h1 fw-bold text-body-emphasis">Hi, I am Shruti Jain</h1>
-                <p class="lead mb-4">An Aspiring Software Developer</p>
-                <button type="button" class="btn btn-primary fs-5">
-                    <a class="nav-link" href="projects.html" target="_main">Projects</a>
-                </button>
-            </div>
-        </section>
-        <!-- intro section ends here-->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
+    <div class="container-lg">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
+            <i class="bi bi-code-square"></i> Shruti Jain
+        </a>
 
-        <!-- contact details section starts here  -->
-        <section>
-            <table class="table table-borderless d-flex justify-content-center">
-                <thead>
-                    <tr>
-                        <th scope="col"> </th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- row-1 starts here -->
-                    <tr>
-                        <th scope="row">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-envelope-fill me-1" viewBox="0 0 16 16">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                            </svg>
-                        </th>
-                        <td>
-                            <a class="nav-link" href="#">jainshruti408@gmail.com</a>
-                        </td>
-                    </tr>
-                    <!-- row-1 ends here  -->
-                    <!-- row-2 starts here -->
-                    <tr>
-                        <th scope="row"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                fill="currentColor" class="bi bi-linkedin me-1" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                            </svg>
-                        </th>
-                        <td>
-                            <a class="nav-link" href="https://www.linkedin.com/in/shruti408/">shrutijain408</a>
-                        </td>
-                    </tr>
-                    <!-- row-2 ends here  -->
-                    <!-- row-3 starts here  -->
-                    <tr>
-                        <th scope="row">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-github" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8">
-                                </path>
-                            </svg>
-                        </th>
-                        <td colspan="2">
-                            <a class="nav-link" href="https://github.com/Shruti408">github.com/Shruti408</a>
-                        </td>
-                    </tr>
-                    <!-- row-3 ends here  -->
-                </tbody>
-            </table>
-        </section>
-        <!-- contact details section ends here  -->
-    </main>
-    <!-- main content ends here  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- footer starts here  -->
-    <footer class="footer fixed-bottom bg-dark text-light p-2">
-        <div class="container text-center">
-            <span>©2026 Shruti Jain</span>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="Shruti_Jain_Full_Stack_Developer.pdf" target="_blank" class="btn btn-outline-dark">
+                <i class="bi bi-file-earmark-person"></i> Resume
+            </a>
         </div>
-    </footer>
-    <!-- footer ends here  -->
-</body>
+    </div>
+</nav>
 
+
+<main style="margin-top: 76px;">
+
+<!-- Hero -->
+<section class="py-5" id="home">
+    <div class="container-lg ">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+                <p class="text-secondary text-uppercase small mb-2">Frontend / Full-Stack Developer</p>
+
+                <h1 class="display-5 fw-bold">Hi, I'm Shruti Jain.<br>I build things for the web.</h1>
+
+                <p class="lead text-secondary">
+                    MCA graduate and developer focused on building responsive, 
+                    user-focused web applications using React, JavaScript,
+                    TypeScript, Node.js and REST APIs.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="#projects" class="btn btn-dark">
+                        View My Projects <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline-dark">Let's Connect</a>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-light text-dark border">React</span>
+                    <span class="badge bg-light text-dark border">JavaScript</span>
+                    <span class="badge bg-light text-dark border">TypeScript</span>
+                    <span class="badge bg-light text-dark border">Node.js</span>
+                    <span class="badge bg-light text-dark border">Express</span>
+                    <span class="badge bg-light text-dark border">Appwrite</span>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm rounded-3 overflow-hidden hover-card">
+                    <div class="card-header bg-white fw-semibold d-flex align-items-center gap-2">
+                        <span class="status-dot"></span>
+                        Currently looking for opportunities
+                    </div>
+                    <div class="card-body bg-dark text-light font-monospace small">
+                        <div>const developer = {</div>
+                        <div class="ps-3">name: "Shruti Jain",</div>
+                        <div class="ps-3">role: "Frontend / Full-Stack",</div>
+                        <div class="ps-3">loves: "building useful things"</div>
+                        <div>};</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--About-->
+<section class="py-5 bg-light border-top" id="about">
+    <div class="container-lg">
+
+        <div class="mb-5">
+            <p class="text-secondary text-uppercase small mb-2">About Me</p>
+            <h2 class="display-6 fw-bold">A little about my journey.</h2>
+        </div>
+
+        <!-- Intro -->
+        <div class="row g-5 mb-5">
+
+            <div class="col-lg-6">
+                <p>
+                    I'm an MCA graduate and frontend/full-stack developer
+                    who enjoys turning ideas and problems into practical
+                    web applications.
+                </p>
+                <p>
+                    My main focus is React and modern JavaScript, while
+                    I've also worked with TypeScript, Node.js, Express,
+                    REST APIs and Appwrite to build complete applications
+                    from frontend to backend.
+                </p>
+                <p>
+                    I enjoy understanding how a product should work,
+                    organizing information clearly and building interfaces
+                    that are simple for people to use.
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                    <div class="icon-circle bg-light border">
+                        <i class="bi bi-hammer"></i>
+                    </div>
+                    <div>
+                        <h5>Build</h5>
+                        <p class="text-secondary mb-0">I enjoy turning ideas into functional applications.</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                    <div class="icon-circle bg-light border">
+                        <i class="bi bi-puzzle"></i>
+                    </div>
+                    <div>
+                        <h5>Solve</h5>
+                        <p class="text-secondary mb-0">I break problems down and look for practical solutions.</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-3">
+                    <div class="icon-circle bg-light border">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div>
+                        <h5>Improve</h5>
+                        <p class="text-secondary mb-0">I care about usability, organization and clean experiences.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!--Projects-->
+<section class="py-5 border-top" id="projects">
+    <div class="container-lg">
+
+        <div class="mb-5">
+            <p class="text-secondary text-uppercase small mb-2">Selected Work</p>
+            <h2 class="display-6 fw-bold">Things I've built.</h2>
+            <p class="text-secondary">
+                A selection of applications I've built while learning
+                and working with modern web technologies.
+            </p>
+        </div>
+
+        <!-- PROJECT 1 -->
+        <div class="card mb-4 border-0 shadow-sm rounded-3 overflow-hidden hover-card">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <img src="images/order-management.png" class="img-fluid h-100 w-100 object-fit-cover" alt="Order Management System">
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body p-4">
+                        <p class="text-secondary small text-uppercase mb-1">Full-Stack Application</p>
+                        <h3 class="h4">Order Management System</h3>
+                        <p>
+                            A full-stack application for managing orders,
+                            built with a React frontend and Node.js/Express
+                            backend.
+                        </p>
+                        <ul class="text-secondary">
+                            <li>Responsive React interface</li>
+                            <li>REST API integration</li>
+                            <li>Backend services with Express</li>
+                            <li>Appwrite data management</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark border">React</span>
+                            <span class="badge bg-light text-dark border">Node.js</span>
+                            <span class="badge bg-light text-dark border">Express</span>
+                            <span class="badge bg-light text-dark border">Appwrite</span>
+                            <span class="badge bg-light text-dark border">Bootstrap</span>
+                        </div>
+                        <a href="https://order-system-ui.onrender.com" class="btn btn-sm btn-dark" target="_blank">Live Demo</a>
+                        <a href="https://github.com/shruti408/order-management-syste" class="btn btn-sm btn-outline-dark" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="card mb-4 border-0 shadow-sm rounded-3 overflow-hidden hover-card">
+            <div class="row g-0 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                    <img src="images/selector.png" class="img-fluid h-100 w-100 object-fit-cover" alt="Selector application">
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body p-4">
+                        <p class="text-secondary small text-uppercase mb-1">React Application</p>
+                        <h3 class="h4">Selector</h3>
+                        <p>
+                            A React application for creating and managing
+                            lists with persistent backend storage using
+                            Appwrite.
+                        </p>
+                        <ul class="text-secondary">
+                            <li>Create and manage lists</li>
+                            <li>Backend data persistence</li>
+                            <li>Responsive interface</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark border">React</span>
+                            <span class="badge bg-light text-dark border">JavaScript</span>
+                            <span class="badge bg-light text-dark border">Bootstrap</span>
+                            <span class="badge bg-light text-dark border">Appwrite</span>
+                        </div>
+                        <a href="https://selector-app.vercel.app/" class="btn btn-sm btn-dark" target="_blank">Live Demo</a>
+                        <a href="https://github.com/shruti408/selector" class="btn btn-sm btn-outline-dark" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="card mb-4 border-0 shadow-sm rounded-3 overflow-hidden hover-card">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <img src="images/ingredients.png" class="img-fluid h-100 w-100 object-fit-cover" alt="Ingredients Admin application">
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body p-4">
+                        <p class="text-secondary small text-uppercase mb-1">Admin Application</p>
+                        <h3 class="h4">Ingredients Admin</h3>
+                        <p>
+                            An admin interface for managing ingredient data
+                            through a dedicated frontend and backend service.
+                        </p>
+                        <ul class="text-secondary">
+                            <li>Data management</li>
+                            <li>API integration</li>
+                            <li>Separate frontend and backend</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark border">React</span>
+                            <span class="badge bg-light text-dark border">JavaScript</span>
+                            <span class="badge bg-light text-dark border">REST API</span>
+                            <span class="badge bg-light text-dark border">Node.js</span>
+                        </div>
+                        <a href="https://ingredients-ui.onrender.com/" class="btn btn-sm btn-dark" target="_blank">Live Demo</a>
+                        <a href="https://github.com/shruti408/ingredients-ui" class="btn btn-sm btn-outline-dark" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden hover-card">
+            <div class="row g-0 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                    <img src="images/primereact.png" class="img-fluid h-100 w-100 object-fit-cover" alt="PrimeReact Table application">
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body p-4">
+                        <p class="text-secondary small text-uppercase mb-1">TypeScript / UI</p>
+                        <h3 class="h4">PrimeReact Table</h3>
+                        <p>
+                            A data table application exploring reusable UI
+                            components, pagination, checkbox selection and
+                            client-side state.
+                        </p>
+                        <ul class="text-secondary">
+                            <li>Pagination</li>
+                            <li>Checkbox selection</li>
+                            <li>Local storage</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark border">React</span>
+                            <span class="badge bg-light text-dark border">TypeScript</span>
+                            <span class="badge bg-light text-dark border">PrimeReact</span>
+                        </div>
+                        <a href="https://prime-reacttable.netlify.app/" class="btn btn-sm btn-dark" target="_blank">Live Demo</a>
+                        <a href="https://github.com/shruti408/Pime-React-Table" class="btn btn-sm btn-outline-dark" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Skills -->
+<section class="py-5 bg-light border-top" id="skills">
+    <div class="container-lg">
+
+        <div class="text-center mb-5">
+            <p class="text-secondary text-uppercase small mb-2">My Toolkit</p>
+            <h2 class="display-6 fw-bold">Technologies I work with.</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-3 hover-card">
+                    <div class="card-body">
+                        <div class="icon-circle bg-light mb-3">
+                            <i class="bi bi-layout-text-window-reverse"></i>
+                        </div>
+                        <h5 class="card-title">Frontend</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light text-dark border">HTML5</span>
+                            <span class="badge bg-light text-dark border">CSS3</span>
+                            <span class="badge bg-light text-dark border">JavaScript</span>
+                            <span class="badge bg-light text-dark border">React.js</span>
+                            <span class="badge bg-light text-dark border">TypeScript</span>
+                            <span class="badge bg-light text-dark border">Bootstrap</span>
+                            <span class="badge bg-light text-dark border">PrimeReact</span>
+                            <span class="badge bg-light text-dark border">React Router</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-3 hover-card">
+                    <div class="card-body">
+                        <div class="icon-circle bg-light mb-3">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <h5 class="card-title">Backend</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light text-dark border">Node.js</span>
+                            <span class="badge bg-light text-dark border">Express.js</span>
+                            <span class="badge bg-light text-dark border">REST APIs</span>
+                            <span class="badge bg-light text-dark border">Axios</span>
+                            <span class="badge bg-light text-dark border">Multer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-3 hover-card">
+                    <div class="card-body">
+                        <div class="icon-circle bg-light mb-3">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <h5 class="card-title">Data & Services</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light text-dark border">Appwrite</span>
+                            <span class="badge bg-light text-dark border">MySQL</span>
+                            <span class="badge bg-light text-dark border">MongoDB</span>
+                            <span class="badge bg-light text-dark border">Authentication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-3 hover-card">
+                    <div class="card-body">
+                        <div class="icon-circle bg-light mb-3">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h5 class="card-title">Tools</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light text-dark border">Git</span>
+                            <span class="badge bg-light text-dark border">GitHub</span>
+                            <span class="badge bg-light text-dark border">Postman</span>
+                            <span class="badge bg-light text-dark border">Docker</span>
+                            <span class="badge bg-light text-dark border">GitHub Actions</span>
+                            <span class="badge bg-light text-dark border">Vercel</span>
+                            <span class="badge bg-light text-dark border">Netlify</span>
+                            <span class="badge bg-light text-dark border">Render</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--Approach -->
+<section class="py-5 border-top">
+    <div class="container-lg">
+
+        <div class="text-center mb-5">
+            <p class="text-secondary text-uppercase small mb-2">My Approach</p>
+            <h2 class="display-6 fw-bold">How I approach building.</h2>
+        </div>
+
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <h5>01. Understand</h5>
+                <p class="text-secondary">Understand the problem, requirements and user needs.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>02. Plan</h5>
+                <p class="text-secondary">Break the problem into smaller features and decide how they should work together.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>03. Build</h5>
+                <p class="text-secondary">Build the interface and implement the application functionality.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>04. Improve</h5>
+                <p class="text-secondary">Test, refine and improve the experience based on what I learn.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- EDUCATION & CERTIFICATIONS -->
+<section class="py-5 bg-light border-top" id="education">
+    <div class="container-lg">
+
+        <div class="text-center mb-5">
+            <p class="text-secondary text-uppercase small mb-2">Background</p>
+            <h2 class="display-6 fw-bold">Education & Certification.</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- EDUCATION -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm rounded-3 hover-card">
+                    <div class="card-header bg-white d-flex align-items-center gap-2">
+                        <div class="icon-circle bg-light">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <div>
+                            <p class="text-secondary text-uppercase small mb-0" style="font-size: .7rem;">Education</p>
+                            <h6 class="mb-0 fw-semibold">Academic Background</h6>
+                        </div>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h6 class="mb-1">Master of Computer Applications</h6>
+                                <span class="badge bg-light text-dark border">2024</span>
+                            </div>
+                            <p class="text-secondary small mb-1">MCA</p>
+                            <p class="text-secondary small mb-0">
+                                Focused on computer applications, software development,
+                                databases, programming and web technologies.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h6 class="mb-1">B.A. (Hons.) English Literature</h6>
+                                <span class="badge bg-light text-dark border">2020</span>
+                            </div>
+                            <p class="text-secondary small mb-1">Bachelor's Degree</p>
+                            <p class="text-secondary small mb-0">
+                                Developed strong communication, analytical thinking
+                                and research skills.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm rounded-3 hover-card">
+                    <div class="card-header bg-white d-flex align-items-center gap-2">
+                        <div class="icon-circle bg-light">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <div>
+                            <p class="text-secondary text-uppercase small mb-0" style="font-size: .7rem;">Certifications</p>
+                            <h6 class="mb-0 fw-semibold">Professional Learning</h6>
+                        </div>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex gap-3">
+                                <i class="bi bi-code-slash fs-4 text-secondary"></i>
+                                <div>
+                                    <h6 class="mb-1">Full Stack Development</h6>
+                                    <p class="text-secondary small mb-1">Board Infinity</p>
+                                    <p class="text-secondary small mb-2">
+                                        Training in frontend and backend development,
+                                        web technologies, APIs and full-stack application
+                                        development.
+                                    </p>
+                                 </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="d-flex gap-3">
+                                <i class="bi bi-award fs-4 text-secondary"></i>
+                                <div>
+                                    <h6 class="mb-1">C++ Programming Language</h6>
+                                    <p class="text-secondary small mb-1">Coding Ninjas</p>
+                                    <p class="text-secondary small mb-2">
+                                        Basics of C++, Object Oriented Programming,
+                                        Data Structures and Algorithms.
+                                    </p>
+                                 </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="py-5 bg-dark text-light border-top" id="contact">
+    <div class="container-lg text-center">
+
+        <p class="text-secondary text-uppercase small mb-2">Get In Touch</p>
+        <h2 class="display-6 fw-bold">Let's build something useful.</h2>
+
+        <p class="text-secondary mx-auto" style="max-width: 500px;">
+            I'm currently looking for frontend and full-stack
+            developer opportunities where I can contribute,
+            learn and grow as a developer.
+        </p>
+
+        <a href="mailto:jainshruti408@gmail.com" class="btn btn-light mb-4">
+            Email Me <i class="bi bi-arrow-right"></i>
+        </a>
+
+        <div class="d-flex justify-content-center gap-4">
+            <a href="https://www.linkedin.com/in/shrutijain408/" class="text-light" target="_blank">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Shruti408" class="text-light" target="_blank">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="mailto:jainshruti408@gmail.com" class="text-light">
+                <i class="bi bi-envelope"></i> Email
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="py-3 border-top bg-dark text-light">
+    <div class="container-lg d-flex flex-column flex-md-row justify-content-between gap-2">
+        <p class="mb-0 small">&copy; 2026 Shruti Jain</p>
+        <p class="mb-0 small">Built with Bootstrap.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
 </html>
